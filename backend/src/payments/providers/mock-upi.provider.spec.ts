@@ -5,7 +5,7 @@ describe('MockUpiProvider', () => {
   const provider = new MockUpiProvider({
     getOrThrow: jest.fn((key: string) => {
       const values: Record<string, string> = {
-        'payments.upiPayeeVpa': '9561999@upi',
+        'payments.upiPayeeVpa': 'merchant@upi',
         'payments.upiPayeeName': 'PiPay',
         'security.mockUpiWebhookSecret': 'mock-webhook-secret'
       };
@@ -22,7 +22,7 @@ describe('MockUpiProvider', () => {
     expect(order.provider).toBe('mock_upi');
     expect(order.providerOrderId).toBe('mock_order_txn_123');
     expect(order.upiIntentUrl).toContain('upi://pay');
-    expect(order.upiIntentUrl).toContain('pa=9561999@upi');
+    expect(order.upiIntentUrl).toContain('pa=merchant@upi');
     expect(order.upiIntentUrl).toContain('pn=PiPay');
     expect(order.upiIntentUrl).toContain('am=500.00');
     expect(order.upiIntentUrl).toContain('cu=INR');

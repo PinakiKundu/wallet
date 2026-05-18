@@ -11,8 +11,8 @@ const envSchema = z.object({
   JWT_ACCESS_TTL_SECONDS: z.coerce.number().int().positive().default(900),
   REFRESH_TOKEN_TTL_DAYS: z.coerce.number().int().positive().default(30),
   MOCK_UPI_WEBHOOK_SECRET: z.string().min(16),
-  UPI_PAYEE_VPA: z.string().min(3).default('9561999@upi'),
-  UPI_PAYEE_NAME: z.string().min(1).default('PiPay'),
+  UPI_PAYEE_VPA: z.string().min(3),
+  UPI_PAYEE_NAME: z.string().min(1),
   LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']).default('info')
 });
 
