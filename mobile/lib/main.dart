@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app/app_shell.dart';
+import 'design/finbrand.dart';
 
 void main() {
-  runApp(const ProviderScope(child: WalletApp()));
+  runApp(const ProviderScope(child: PiPayApp()));
 }
 
-class WalletApp extends StatelessWidget {
-  const WalletApp({super.key});
+class PiPayApp extends StatelessWidget {
+  const PiPayApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Digital Wallet',
+      title: FinBrand.appName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF146C94)),
-        useMaterial3: true
-      ),
+      theme: buildFinTheme(Brightness.light),
+      darkTheme: buildFinTheme(Brightness.dark),
+      themeMode: ThemeMode.system,
       home: const AppShell()
     );
   }

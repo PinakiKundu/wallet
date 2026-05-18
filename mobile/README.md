@@ -1,6 +1,6 @@
-# Digital Wallet Mobile MVP
+# PiPay Mobile MVP
 
-Flutter MVP scaffold for:
+Flutter PiPay scaffold for:
 
 - mobile OTP login
 - wallet balance and statement
@@ -14,7 +14,7 @@ Setup after Flutter is installed:
 ```powershell
 Set-Location mobile
 flutter pub get
-flutter run --dart-define=API_BASE_URL=http://10.0.2.2:3000/api/v1
+flutter run --dart-define=API_BASE_URL=https://pipay-api.wittyglacier-9b2013dc.centralindia.azurecontainerapps.io/api/v1
 ```
 
 Use `10.0.2.2` for Android emulator access to host localhost. Use your machine LAN IP for a physical device.

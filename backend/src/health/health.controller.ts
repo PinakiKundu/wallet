@@ -16,7 +16,7 @@ export class HealthController {
   live() {
     return {
       status: 'ok',
-      service: 'digital-wallet-backend',
+      service: 'pipay-backend',
       timestamp: new Date().toISOString()
     };
   }

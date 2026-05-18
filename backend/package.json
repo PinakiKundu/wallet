@@ -1,12 +1,12 @@
 {
-  "name": "digital-wallet-backend",
+  "name": "pipay-backend",
   "version": "0.1.0",
   "private": true,
-  "description": "Production-oriented digital wallet MVP backend",
+  "description": "Production-oriented PiPay wallet backend",
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
-    "start": "node dist/main.js",
+    "start": "node dist/src/main.js",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\" --max-warnings=0 --no-error-on-unmatched-pattern",

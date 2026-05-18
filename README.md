@@ -1,6 +1,6 @@
-# Digital Wallet MVP
+# PiPay MVP
 
-Production-oriented digital wallet MVP inspired by Indian wallet flows such as add money through UPI, merchant QR payments, and static vendor-code payments.
+Production-oriented PiPay wallet MVP inspired by Indian wallet flows such as add money through UPI, merchant QR payments, and static vendor-code payments.
 
 ## Phase 1 Backend Foundation
 

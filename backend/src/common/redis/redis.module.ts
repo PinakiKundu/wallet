@@ -8,7 +8,7 @@ import { RedisService } from './redis.service';
     {
       provide: RedisService,
       inject: [ConfigService],
-      useFactory: (config: ConfigService) => new RedisService(config.getOrThrow<string>('database.redisUrl'))
+      useFactory: (config: ConfigService) => new RedisService(config.get<string>('database.redisUrl'))
     }
   ],
   exports: [RedisService]

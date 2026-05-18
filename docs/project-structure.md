@@ -1,7 +1,7 @@
 # Project Structure
 
 ```text
-digital-wallet/
+pipay/
   backend/
     src/
       main.ts
@@ -115,4 +115,3 @@ Controllers should only handle transport concerns:
 - Returning standard responses.
 
 Application services own transaction orchestration. Repositories own persistence details. Domain policies own business invariants such as transaction limits, merchant status checks, and wallet debit eligibility.
-

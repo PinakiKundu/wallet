@@ -1,4 +1,4 @@
-# Digital Wallet MVP Architecture
+# PiPay MVP Architecture
 
 ## MVP Scope
 
@@ -206,4 +206,3 @@ Codes are unique, non-sequential, and status controlled.
   - ledger post latency
   - webhook duplicates
   - reconciliation mismatches
-

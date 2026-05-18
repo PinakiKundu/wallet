@@ -11,12 +11,14 @@ export class MockUpiProvider implements PaymentGatewayProvider {
     const providerOrderId = `mock_order_${input.transactionRef}`;
     const providerPaymentId = `mock_pay_${input.transactionRef}`;
     const amountRupees = (Number(input.amount) / 100).toFixed(2);
+    const payeeVpa = this.config.getOrThrow<string>('payments.upiPayeeVpa');
+    const payeeName = encodeURIComponent(this.config.getOrThrow<string>('payments.upiPayeeName'));
 
     return {
       provider: 'mock_upi',
       providerOrderId,
       providerPaymentId,
-      upiIntentUrl: `upi://pay?pa=wallet-mock@upi&pn=Digital%20Wallet&am=${amountRupees}&cu=INR&tr=${input.transactionRef}`,
+      upiIntentUrl: `upi://pay?pa=${payeeVpa}&pn=${payeeName}&am=${amountRupees}&cu=INR&tr=${input.transactionRef}`,
       expiresAt: new Date(Date.now() + 10 * 60 * 1000)
     };
   }

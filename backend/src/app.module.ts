@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { validateEnv } from './common/config/env.validation';
 import appConfig from './common/config/app.config';
 import databaseConfig from './common/config/database.config';
+import paymentsConfig from './common/config/payments.config';
 import securityConfig from './common/config/security.config';
 import { DatabaseModule } from './common/database/database.module';
 import { LoggerModule } from './common/logging/logger.module';
@@ -23,7 +24,7 @@ import { HealthModule } from './health/health.module';
       cache: true,
       expandVariables: true,
       validate: validateEnv,
-      load: [appConfig, databaseConfig, securityConfig]
+      load: [appConfig, databaseConfig, paymentsConfig, securityConfig]
     }),
     LoggerModule,
     DatabaseModule,

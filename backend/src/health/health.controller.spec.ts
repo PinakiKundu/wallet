@@ -31,7 +31,7 @@ describe('HealthController', () => {
   it('returns liveness status', () => {
     expect(controller.live()).toMatchObject({
       status: 'ok',
-      service: 'digital-wallet-backend'
+      service: 'pipay-backend'
     });
   });
 

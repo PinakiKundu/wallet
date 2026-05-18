@@ -38,8 +38,8 @@ async function bootstrap() {
   );
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('Digital Wallet API')
-    .setDescription('MVP wallet backend for UPI add-money and merchant wallet payments')
+    .setTitle('PiPay API')
+    .setDescription('PiPay backend for UPI add-money and merchant wallet payments')
     .setVersion('0.1.0')
     .addBearerAuth()
     .addApiKey({ type: 'apiKey', in: 'header', name: 'Idempotency-Key' }, 'Idempotency-Key')
